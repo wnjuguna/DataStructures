@@ -1,0 +1,11 @@
+version: 2
+docker:
+  - image: circleci/python:3.7.5
+jobs:
+  build:
+    steps:
+      - checkout
+      - run:
+          name: Running Unit tests
+          command: |
+            python3 -m unittest discover
